@@ -1,0 +1,10 @@
+<lang>
+  <loc value="앱">app_menu_strip</loc>
+  <loc value="옵션">options_menu_strip</loc>
+  <loc value="사이">conn_menu_strip</loc>
+  <loc value="환경 설정">pref_menu_strip</loc>
+  <loc value="기능">funcs_menu_strip</loc>
+  <loc value="해석학">analytics_menu_strip</loc>
+  <loc value="집">home_page</loc>
+  <loc value="기능">funcs_page</loc>
+</lang>

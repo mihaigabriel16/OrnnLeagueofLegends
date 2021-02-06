@@ -1,0 +1,12 @@
+<lang>
+  <loc value="App">app_menu_strip</loc>
+  <loc value="Options">options_menu_strip</loc>
+  <loc value="Connections">conn_menu_strip</loc>
+  <loc value="Preferences">pref_menu_strip</loc>
+  <loc value="Functions">funcs_menu_strip</loc>
+  <loc value="Analytics">analytics_menu_strip</loc>
+  <loc value="Home">home_page</loc>
+  <loc value="Functions">funcs_page</loc>
+  <loc value="Game Info">game_info_page</loc>
+  <loc value="Dev Tab">dev_page</loc>  
+</lang>
