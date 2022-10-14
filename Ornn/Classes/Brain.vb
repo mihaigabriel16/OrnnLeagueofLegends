@@ -59,6 +59,23 @@ Public Class Brain
         Return ping.Send(hostNameOrAddress).RoundtripTime
     End Function
 
+    Public Function GetResponseTime(ByRef hostNameOrAddress As String)
+        Dim Result As Net.NetworkInformation.PingReply
+        Dim SendPing As New Net.NetworkInformation.Ping
+        Dim ResponseTime As Long '<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        Try
+            Result = SendPing.Send(hostNameOrAddress)
+            ResponseTime = Result.RoundtripTime
+            If Result.Status = Net.NetworkInformation.IPStatus.Success Then
+                Debug.WriteLine(ResponseTime.ToString)
+                Return ResponseTime.ToString
+            Else
+                Debug.WriteLine("")
+            End If
+        Catch ex As Exception
+        End Try
+    End Function
+
     Public Sub AddForm(frm As Form, pnl As Panel)
         RemoveAllControlsFromPanel(pnl)
         frm.TopMost = True

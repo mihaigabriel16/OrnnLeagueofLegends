@@ -2,9 +2,12 @@
 Imports System.Net
 Imports System.Web
 Imports System.Reflection
+Imports System.Net.Http
 Imports Newtonsoft.Json.Linq
 Imports System.Xml
 Imports Newtonsoft
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
 Public Class mainApp
     Dim brain As New Brain
     Dim funcs As New Functions
@@ -12,6 +15,10 @@ Public Class mainApp
     Dim lst As New List(Of String)
     Shared regList As New List(Of String)
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Globals.RIOT_API_KEY = GetApiKey()
+        Client.SetApiKey()
+
+
         Dim news As New newsPage
         news.TopMost = True
         news.TopLevel = False
@@ -40,14 +47,27 @@ Public Class mainApp
             For Each item In regList
                 Try
                     funcs.GetSummonerInfo(gamedata.activePlayer.summonerName, item, Panel3)
-                    MsgBox("found on " & item & gamedata.activePlayer.summonerName)
+                    'MsgBox("found on " & item & gamedata.activePlayer.summonerName)
                 Catch ex As Exception
-                    MsgBox("not found on " & item & gamedata.activePlayer.summonerName)
+                    'MsgBox("not found on " & item & gamedata.activePlayer.summonerName)
                 End Try
             Next
         End If
     End Sub
 
+    Private Function GetApiKey()
+        Dim request As WebRequest = WebRequest.Create("https://www.pubstatic.com/ornn.txt")
+        Dim response As WebResponse = request.GetResponse()
+        Dim data As Stream = response.GetResponseStream()
+        Dim html As String = String.Empty
+
+        Using sr As StreamReader = New StreamReader(data)
+            html = sr.ReadToEnd()
+
+        End Using
+        Debug.Print(html)
+        Return html
+    End Function
 
     Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
         If e.KeyCode = Keys.Enter Then
@@ -129,5 +149,14 @@ Public Class mainApp
 
     Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
         optionsForm.ShowDialog()
+    End Sub
+
+    Private Sub DesignToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DesignToolStripMenuItem.Click
+        overlayOne.Show()
+
+    End Sub
+
+    Private Sub mainApp_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+
     End Sub
 End Class

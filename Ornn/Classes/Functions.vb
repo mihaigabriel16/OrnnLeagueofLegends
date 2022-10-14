@@ -122,8 +122,8 @@ Public Class Functions
             sm.Label5.Text = rankSolo
         Next
         Dim tClient As WebClient = New WebClient
-        Dim tImage As Bitmap = Bitmap.FromStream(New MemoryStream(tClient.DownloadData("http://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/" & summoner.profileIconId & ".jpg")))
-        sm.PictureBox1.BackgroundImage = tImage
+        'Dim tImage As Bitmap = Bitmap.FromStream(New MemoryStream(tClient.DownloadData("http://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/" & summoner.profileIconId & ".jpg")))
+        'sm.PictureBox1.BackgroundImage = tImage
 
         Try
             Dim spectator As CurrentGameInfoDTO = Client.api.SpectateActiveGame(summoner.id, region)
@@ -168,7 +168,7 @@ Public Class Functions
                 Next
             Next
         Catch ex As Exception
-            MsgBox(ex.ToString & vbNewLine & "Active Game Not Found")
+            'MsgBox(ex.ToString & vbNewLine & "Active Game Not Found")
         End Try
     End Sub
 

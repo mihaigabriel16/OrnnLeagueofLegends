@@ -51,6 +51,7 @@ Partial Class mainApp
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.home_seach_button = New System.Windows.Forms.Button()
         Me.funcs_page = New System.Windows.Forms.TabPage()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -68,7 +69,6 @@ Partial Class mainApp
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.CheckForLoLGame = New System.Windows.Forms.Timer(Me.components)
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -101,24 +101,24 @@ Partial Class mainApp
         'SourceCodeToolStripMenuItem
         '
         Me.SourceCodeToolStripMenuItem.Name = "SourceCodeToolStripMenuItem"
-        Me.SourceCodeToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.SourceCodeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SourceCodeToolStripMenuItem.Text = "Forms Source Code"
         '
         'DesignToolStripMenuItem
         '
         Me.DesignToolStripMenuItem.Name = "DesignToolStripMenuItem"
-        Me.DesignToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.DesignToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DesignToolStripMenuItem.Text = "Design"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(174, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
         '
         'OptionsToolStripMenuItem
         '
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.OptionsToolStripMenuItem.Text = "Options"
         '
         'options_menu_strip
@@ -131,13 +131,13 @@ Partial Class mainApp
         'conn_menu_strip
         '
         Me.conn_menu_strip.Name = "conn_menu_strip"
-        Me.conn_menu_strip.Size = New System.Drawing.Size(155, 22)
+        Me.conn_menu_strip.Size = New System.Drawing.Size(180, 22)
         Me.conn_menu_strip.Text = "<connections>"
         '
         'pref_menu_strip
         '
         Me.pref_menu_strip.Name = "pref_menu_strip"
-        Me.pref_menu_strip.Size = New System.Drawing.Size(155, 22)
+        Me.pref_menu_strip.Size = New System.Drawing.Size(180, 22)
         Me.pref_menu_strip.Text = "<preferences>"
         '
         'funcs_menu_strip
@@ -162,13 +162,13 @@ Partial Class mainApp
         'ReportbugToolStripMenuItem
         '
         Me.ReportbugToolStripMenuItem.Name = "ReportbugToolStripMenuItem"
-        Me.ReportbugToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.ReportbugToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ReportbugToolStripMenuItem.Text = "<report_bug>"
         '
         'HelpToolStripMenuItem1
         '
         Me.HelpToolStripMenuItem1.Name = "HelpToolStripMenuItem1"
-        Me.HelpToolStripMenuItem1.Size = New System.Drawing.Size(148, 22)
+        Me.HelpToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.HelpToolStripMenuItem1.Text = "<help>"
         '
         'StatusStrip1
@@ -302,6 +302,16 @@ Partial Class mainApp
         Me.funcs_page.TabIndex = 1
         Me.funcs_page.Text = "<funcs>"
         Me.funcs_page.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Enabled = False
+        Me.Button6.Location = New System.Drawing.Point(6, 122)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(100, 23)
+        Me.Button6.TabIndex = 5
+        Me.Button6.Text = "Soul Chance"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Button5
         '
@@ -465,16 +475,6 @@ Partial Class mainApp
         '
         'CheckForLoLGame
         '
-        '
-        'Button6
-        '
-        Me.Button6.Enabled = False
-        Me.Button6.Location = New System.Drawing.Point(6, 122)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(100, 23)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "Soul Chance"
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'mainApp
         '
